@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>WA Sender</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>WA Message Sender</h1>
+
+  <p>Send whatsapp messages without saving their number</p>
+  <input id='num' placeholder="Paste the number here" />
+  <button onclick="(function(){
+      const numb = document.getElementById('num').value
+      window.open(`http://wa.me/91${numb}`,'_blank');
+     })()">Send</button>
+</body>
+
+</html>

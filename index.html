@@ -15,11 +15,14 @@
   <input id='num' placeholder="Paste the number here" />
   <button onclick="(function(){
       let numb = document.getElementById('num').value;
+      numb = numb.replace(/\s/g, '');
+      numb = numb.replace('+', '');
       if(numb.length === 10){
         numb = '91'+ numb;
       }
       window.open('http://wa.me/' + numb,'_blank');
      })()">Send</button>
+
 </body>
 
 </html>

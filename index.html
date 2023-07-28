@@ -15,7 +15,10 @@
   <input id='num' placeholder="Paste the number here" />
   <button onclick="(function(){
       const numb = document.getElementById('num').value
-      window.open(`http://wa.me/91${numb}`,'_blank');
+      if(numb.length === 10){
+        numb = '91'+ numb;
+      }
+      window.open('http://wa.me/' + numb,'_blank');
      })()">Send</button>
 </body>
 
